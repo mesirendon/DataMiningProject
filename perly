@@ -1,0 +1,244 @@
+#! /usr/bin/perl
+
+use Switch;
+
+print "DOB_YY,DOB_MM,DOB_TT_HH,DOB_TT_MM,DOB_WK,BFACIL," .
+      "MAGER,MBSTATE_REC,RESTATUS,MRACE6,MHISP_R,MAR_P," .
+      "DMAR,MEDUC,FAGEREC11,FRACE6,FHISP_R,FEDUC,TBO_REC," .
+      "PRECARE5,PREVIS,WIC,CIG_0,CIG_1,CIG_2,CIG_3,M_Ht_In," .
+      "BMI,BMI_R,PWgt_R,DWgt_R,WTGAIN,RF_PDIAB,RF_GDIAB," .
+      "RF_PHYPE,RF_GHYPE,RF_EHYPE,RF_PPTERM,RF_INFTR," .
+      "RF_FEDRG,RF_ARTEC,RF_CESARN,NO_RISKS,IP_GON,IP_SYPH," .
+      "IP_CHLAM,IP_HEPB,IP_HEPC,NO_INFEC,LD_INDL,LD_AUGM," .
+      "LD_STER,LD_ANTB,LD_CHOR,LD_ANES,NO_LBRDLV,ME_PRES," .
+      "ME_ROUT,DMETH_REC,ATTEND,PAY,APGAR5,APGAR10,DPLURAL," .
+      "SETORDER_R,SEX,COMBGEST,DBWT" .
+      "\n";
+while(<>) {
+  my ($trash1,$DOB_YY,$DOB_MM,$trash2,$DOB_TT_HH,$DOB_TT_MM,$DOB_WK,
+    $trash3,$BFACIL,$trash4,$MAGER,$trash5,$MBSTATE_REC,$trash6,
+    $RESTATUS,$trash7,$MRACE6,$trash8,$MHISP_R,$trash9,$MAR_P,$DMAR,
+    $trash10,$MEDUC,$trash11,$FAGEREC11,$trash12,$FRACE6,$trash13,
+    $FHISP_R,$trash14,$FEDUC,$trash15,$TBO_REC,$trash16,$PRECARE5,
+    $trash17,$PREVIS,$trash18,$WIC,$CIG_0,$CIG_1,$CIG_2,$CIG_3,$trash19,
+    $M_Ht_In,$trash20,$BMI,$BMI_R,$trash21,$PWgt_R,$trash22,$DWgt_R,
+    $trash23,$WTGAIN,$trash24,$RF_PDIAB,$RF_GDIAB,$RF_PHYPE,$RF_GHYPE,
+    $RF_EHYPE,$RF_PPTERM,$trash25,$RF_INFTR,$RF_FEDRG,$RF_ARTEC,
+    $trash26,$RF_CESARN,$trash27,$NO_RISKS,$trash28,$IP_GON,$IP_SYPH,
+    $IP_CHLAM,$IP_HEPB,$IP_HEPC,$trash29,$NO_INFEC,$trash30,$LD_INDL,
+    $LD_AUGM,$LD_STER,$LD_ANTB,$LD_CHOR,$LD_ANES,$trash31,$NO_LBRDLV,
+    $trash32,$ME_PRES,$ME_ROUT,$trash33,$DMETH_REC,$trash34,$ATTEND,
+    $trash35,$PAY,$trash36,$APGAR5,$trash37,$APGAR10,$trash38,$DPLURAL,
+    $trash39,$SETORDER_R,$trash40,$SEX,$trash41,$COMBGEST,$trash42,$DBWT)
+  = unpack(
+    "a8a4a2a4a2a2a1a8a1a42a2a7a1a19a1a2a1a7a1a3a1a1a3a1a24a2a2a1a6a1" .
+    "a2a1a18a1a44a1a10a2a11a1a2a2a2a2a20a2a1a4a1a4a3a4a3a2a2a7a1a1a1" .
+    "a1a1a1a6a1a1a1a4a2a3a1a5a1a1a1a1a1a5a1a29a1a1a1a1a1a1a6a1a5a1a1" .
+    "a5a1a24a1a1a1a8a2a2a2a4a1a4a1a15a1a14a2a12a4",
+    $_
+  );
+  print "$DOB_YY,$DOB_MM,$DOB_TT_HH,$DOB_TT_MM," . &day_of_week( $DOB_WK ) .
+        "," . &bfacil( $BFACIL ) . "," .  "$MAGER," .
+        &mbstate_rec( $MBSTATE_REC ) . ",$RESTATUS," . &race6( $MRACE6 ) .  "," .
+        &hisp_r( $MHISP_R ) . ",$MAR_P," .  &dmar( $DMAR ) . "," .
+        &educ( $MEDUC ) . "," . &fagerec11( $FAGEREC11 ) .  "," .
+        &race6( $FRACE6 ) . "," . &hisp_r( $FHISP_R ) .  "," . &educ( $FEDUC ) .
+        ",$TBO_REC," . &precare5( $PRECARE5 ) . ",$PREVIS,$WIC,$CIG_0,$CIG_1," .
+        "$CIG_2,$CIG_3,$M_Ht_In,$BMI," . &bmi_r( $BMI_R ) . ",$PWgt_R,$DWgt_R," .
+        "$WTGAIN,$RF_PDIAB,$RF_GDIAB,$RF_PHYPE,$RF_GHYPE,$RF_EHYPE,$RF_PPTERM," .
+        "$RF_INFTR,$RF_FEDRG,$RF_ARTEC,$RF_CESARN,$NO_RISKS,$IP_GON,$IP_SYPH," .
+        "$IP_CHLAM,$IP_HEPB,$IP_HEPC,$NO_INFEC,$LD_INDL,$LD_AUGM,$LD_STER," .
+        "$LD_ANTB,$LD_CHOR,$LD_ANES,$NO_LBRDLV," . &me_pres( $ME_PRES ) .  "," .
+        &me_rout( $ME_ROUT ) . "," . &dmeth_rec( $DMETH_REC ) . "," .
+        &attend( $ATTEND ) . "," . &pay( $PAY ) . ",$APGAR5,$APGAR10," .
+        &dplural( $DPLURAL ) . "," . &setorder_r( $SETORDER_R ) . ",$SEX," .
+        "$COMBGEST,$DBWT" .
+        "\n";
+}
+
+sub day_of_week {
+  switch($_[0]) {
+    case 1 { return "Sunday" }
+    case 2 { return "Monday" }
+    case 3 { return "Tuesday" }
+    case 4 { return "Wednesday" }
+    case 5 { return "Thursday" }
+    case 6 { return "Friday" }
+    case 7 { return "Saturday" }
+  }
+}
+
+sub bfacil {
+  switch($_[0]) {
+    case 1 { return "Hospital" }
+    case 2 { return "Freestanding Birth Center" }
+    case 3 { return "Home (intended)" }
+    case 4 { return "Home (not intended)" }
+    case 5 { return "Home (unknown if intended)" }
+    case 6 { return "Clinic / Doctor’s Office" }
+    case 7 { return "Other" }
+    else   { return "Unknown" }
+  }
+}
+
+sub mbstate_rec {
+  switch($_[0]) {
+    case 1 { return "Born in the U.S. (50 US States)" }
+    case 2 { return "Born outside the U.S. (includes possessions)" }
+    else { return "Unknown or Not Stated" }
+  }
+}
+
+sub race6 {
+  switch($_[0]) {
+    case 1 { return "White (only)" }
+    case 2 { return "Black (only)" }
+    case 3 { return "AIAN (only)" }
+    case 4 { return "Asian (only)" }
+    case 5 { return "NHOPI (only)" }
+    else { return "More than one race" }
+  }
+}
+
+sub hisp_r {
+  switch($_[0]) {
+    case 1 { return "White (only)" }
+    case 2 { return "Black (only)" }
+    case 3 { return "AIAN (only)" }
+    case 4 { return "Asian (only)" }
+    case 5 { return "NHOPI (only)" }
+    else { return "More than one race" }
+  }
+}
+
+sub dmar {
+  switch($_[0]) {
+    case 1 { return "Married" }
+    case [ 2, 3 ] { return "Unmarried" }
+    else { return "Unknown or not stated" }
+  }
+}
+
+sub educ {
+  switch($_[0]) {
+    case 1 { return "8th grade or less" }
+    case 2 { return "9th through 12th grade with no diploma" }
+    case 3 { return "High school graduate or GED completed" }
+    case 4 { return "Some college credit but not a degree." }
+    case 5 { return "Associate degree (AA - AS)" }
+    case 6 { return "Bachelor’s degree (BA - AB - BS)" }
+    case 7 { return "Master’s degree (MA - MS - MEng - MEd - MSW - MBA)" }
+    case 8 { return "Doctorate (PhD - EdD) or Professional Degree (MD - DDS - DVM - LLB - JD)" }
+    else { return "Unknown" }
+  }
+}
+
+sub fagerec11 {
+  switch($_[0]) {
+    case "01" { return "Under 15 years" }
+    case "02" { return "15-19 years" }
+    case "03" { return "20-24 years" }
+    case "04" { return "25-29 years" }
+    case "05" { return "30-34 years" }
+    case "06" { return "35-39 years" }
+    case "07" { return "40-44 years" }
+    case "08" { return "45-49 years" }
+    case "09" { return "50-54 years" }
+    case "10" { return "55-98 years" }
+    case "11" { return "Not stated" }
+  }
+}
+
+sub precare5 {
+  switch($_[0]) {
+    case 1 { return "1st to 3rd  month" }
+    case 2 { return "4th to 6th month" }
+    case 3 { return "7th to final month" }
+    case 4 { return "No prenatal care" }
+    else { return "Unknown or not stated" }
+  }
+}
+
+sub bmi_r {
+  switch($_[0]) {
+    case 1 { return "Underweight <18.5" }
+    case 2 { return "Normal 18.5-24.9" }
+    case 3 { return "Overweight 25.0-29.9" }
+    case 4 { return "Obesity I 35.0-34.9" }
+    case 5 { return "Obesity II 35.0-39.9" }
+    case 6 { return "Extreme Obesity III ≥ 40.0" }
+    else { return "Unknown or not stated" }
+  }
+}
+
+sub me_pres {
+  switch($_[0]) {
+    case 1 { return "Cephalic" }
+    case 2 { return "Breech" }
+    case 3 { return "Other" }
+    else { return "Unknown or not stated" }
+  }
+}
+
+sub me_rout {
+  switch($_[0]) {
+    case 1 { return "Spontaneous" }
+    case 2 { return "Forceps" }
+    case 3 { return "Vacuum" }
+    case 4 { return "Cesarean" }
+    else { return "Unknown or not stated" }
+  }
+}
+
+sub dmeth_rec {
+  switch($_[0]) {
+    case 1 { return "Vaginal" }
+    case 2 { return "C-Section" }
+    else { return "Unknown" }
+  }
+}
+
+sub attend {
+  switch($_[0]) {
+    case 1 { return "Doctor of Medicine (MD)" }
+    case 2 { return "Doctor of Osteopathy (DO)" }
+    case 3 { return "Certified Nurse Midwife (CNM)" }
+    case 4 { return "Other Midwife" }
+    case 5 { return "Other" }
+    else { return "Unknown or not stated" }
+  }
+}
+
+sub pay {
+  switch($_[0]) {
+    case 1 { return "Medicaid" }
+    case 2 { return "Private Insurance" }
+    case 3 { return "Self-Pay" }
+    case 4 { return "Indian Health Service" }
+    case 5 { return "CHAMPUS/TRICARE" }
+    case 6 { return "Other Government (Federal - State - Local)" }
+    case 8 { return "Other" }
+    else { return "Unknown" }
+  }
+}
+
+sub dplural {
+  switch($_[0]) {
+    case 1 { return "Single" }
+    case 2 { return "Twin" }
+    case 3 { return "Triplet" }
+    case 4 { return "Quadruplet" }
+    else { return "Quintuplet or higher" }
+  }
+}
+
+sub setorder_r {
+  switch($_[0]) {
+    case 1 { return "1st" }
+    case 2 { return "2nd" }
+    case 3 { return "3rd" }
+    case 4 { return "4th" }
+    case 5 { return "5th to 16th" }
+    else { return "Unknown or not stated" }
+  }
+}
