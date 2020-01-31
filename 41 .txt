@@ -1,0 +1,82 @@
+
+Call:
+lm(formula = APGAR5 ~ ., data = x)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-76.235  -0.287  -0.007   0.159  90.189 
+
+Coefficients: (6 not defined because of singularities)
+                                                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                   -7.034e-01  4.300e-01  -1.636  0.10189    
+DOB_YY                                                NA         NA      NA       NA    
+DOB_MM                                         3.512e-03  7.651e-04   4.589 4.44e-06 ***
+DOB_TT_HH                                      2.604e-03  4.108e-04   6.341 2.29e-10 ***
+DOB_TT_MM                                      3.722e-05  1.500e-04   0.248  0.80410    
+DOB_WKMonday                                  -4.303e-03  9.407e-03  -0.457  0.64735    
+DOB_WKSaturday                                -4.767e-03  1.021e-02  -0.467  0.64062    
+DOB_WKSunday                                  -1.258e-02  1.069e-02  -1.177  0.23932    
+DOB_WKThursday                                 3.022e-03  9.232e-03   0.327  0.74341    
+DOB_WKTuesday                                 -1.468e-03  9.198e-03  -0.160  0.87319    
+DOB_WKWednesday                               -4.225e-03  9.230e-03  -0.458  0.64710    
+BFACILFreestanding Birth Center               -1.244e+00  2.431e-01  -5.117 3.11e-07 ***
+BFACILHome (intended)                          2.420e+00  2.423e-01   9.988  < 2e-16 ***
+BFACILHome (not intended)                      4.289e+01  2.515e-01 170.492  < 2e-16 ***
+BFACILHome (unknown if intended)               2.599e+01  2.533e-01 102.612  < 2e-16 ***
+BFACILHospital                                -2.676e+00  2.406e-01 -11.124  < 2e-16 ***
+BFACILOther                                    2.608e+01  2.566e-01 101.640  < 2e-16 ***
+BFACILUnknown                                  2.445e+01  4.072e-01  60.049  < 2e-16 ***
+RESTATUS                                       5.430e-03  5.023e-03   1.081  0.27970    
+PRECARE54th to 6th month                      -1.117e-02  7.320e-03  -1.525  0.12719    
+PRECARE57th to final month                     8.207e-02  1.296e-02   6.330 2.45e-10 ***
+PRECARE5No prenatal care                       1.634e+00  2.165e-02  75.492  < 2e-16 ***
+PRECARE5Unknown or not stated                  5.620e-01  2.240e-02  25.090  < 2e-16 ***
+PREVIS                                         5.327e-03  2.493e-04  21.371  < 2e-16 ***
+WICU                                           3.904e-01  2.384e-02  16.376  < 2e-16 ***
+WICY                                           1.335e-02  6.507e-03   2.051  0.04022 *  
+CIG_0                                          2.582e-02  2.860e-03   9.028  < 2e-16 ***
+BMI_RNormal 18.5-24.9                          4.050e-01  1.542e-02  26.266  < 2e-16 ***
+BMI_RObesity I 35.0-34.9                       2.295e-01  1.469e-02  15.619  < 2e-16 ***
+BMI_RObesity II 35.0-39.9                      1.159e-01  1.588e-02   7.302 2.83e-13 ***
+BMI_ROverweight 25.0-29.9                      3.116e-01  1.475e-02  21.122  < 2e-16 ***
+BMI_RUnderweight <18.5                         5.521e-01  2.124e-02  25.993  < 2e-16 ***
+BMI_RUnknown or not stated                     5.958e-01  3.843e-02  15.503  < 2e-16 ***
+PWgt_R                                         3.147e-04  5.317e-05   5.920 3.23e-09 ***
+DWgt_R                                         2.091e-03  2.906e-05  71.940  < 2e-16 ***
+WTGAIN                                        -6.910e-03  1.820e-04 -37.965  < 2e-16 ***
+LD_INDLU                                       7.471e+00  1.404e-01  53.220  < 2e-16 ***
+LD_INDLY                                      -3.377e-02  6.471e-03  -5.219 1.80e-07 ***
+LD_AUGMU                                              NA         NA      NA       NA    
+LD_AUGMY                                      -3.453e-02  6.747e-03  -5.119 3.08e-07 ***
+LD_STERU                                              NA         NA      NA       NA    
+LD_STERY                                       3.147e-01  1.808e-02  17.401  < 2e-16 ***
+LD_ANTBU                                              NA         NA      NA       NA    
+LD_ANTBY                                      -6.134e-03  6.383e-03  -0.961  0.33654    
+LD_CHORU                                              NA         NA      NA       NA    
+LD_CHORY                                      -9.086e-03  2.146e-02  -0.423  0.67202    
+LD_ANESU                                              NA         NA      NA       NA    
+LD_ANESY                                      -2.814e-02  9.200e-03  -3.059  0.00222 ** 
+NO_LBRDLV                                      2.321e-01  1.175e-02  19.748  < 2e-16 ***
+ME_PRESCephalic                               -1.002e-01  1.408e-02  -7.113 1.13e-12 ***
+ME_PRESOther                                   1.131e-01  2.657e-02   4.255 2.09e-05 ***
+ME_PRESUnknown or not stated                   6.715e+00  3.744e-02 179.377  < 2e-16 ***
+PAYIndian Health Service                      -1.538e-01  9.402e-02  -1.635  0.10195    
+PAYMedicaid                                    7.710e-02  2.526e-02   3.053  0.00227 ** 
+PAYOther                                       3.063e-01  3.104e-02   9.870  < 2e-16 ***
+PAYOther Government (Federal - State - Local)  1.025e-01  3.927e-02   2.610  0.00906 ** 
+PAYPrivate Insurance                           6.644e-02  2.502e-02   2.655  0.00793 ** 
+PAYSelf-Pay                                   -3.405e-01  2.820e-02 -12.074  < 2e-16 ***
+PAYUnknown                                     3.179e+00  4.168e-02  76.269  < 2e-16 ***
+APGAR10                                        1.161e-01  2.957e-04 392.571  < 2e-16 ***
+DPLURALQuintuplet or higher                    5.988e-01  9.965e-01   0.601  0.54789    
+DPLURALSingle                                  1.524e-01  3.525e-01   0.432  0.66548    
+DPLURALTriplet                                 7.077e-01  3.623e-01   1.953  0.05077 .  
+DPLURALTwin                                    5.245e-01  3.526e-01   1.488  0.13688    
+DBWT                                           3.160e-04  4.574e-06  69.080  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 5.189 on 3956053 degrees of freedom
+Multiple R-squared:  0.1993,	Adjusted R-squared:  0.1993 
+F-statistic: 1.698e+04 on 58 and 3956053 DF,  p-value: < 2.2e-16
+

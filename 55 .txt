@@ -1,0 +1,55 @@
+
+Call:
+lm(formula = APGAR5 ~ ., data = x)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-74.327  -0.266  -0.045   0.082  89.852 
+
+Coefficients: (2 not defined because of singularities)
+                                                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                    5.750e-01  4.292e-01   1.340 0.180388    
+DOB_YY                                                NA         NA      NA       NA    
+DOB_MM                                         4.171e-03  7.666e-04   5.441 5.29e-08 ***
+DOB_TT_MM                                      4.428e-05  1.504e-04   0.294 0.768437    
+DOB_WKMonday                                  -4.485e-03  9.424e-03  -0.476 0.634111    
+DOB_WKSaturday                                 6.415e-03  1.023e-02   0.627 0.530506    
+DOB_WKSunday                                   4.913e-03  1.069e-02   0.460 0.645747    
+DOB_WKThursday                                -7.329e-04  9.254e-03  -0.079 0.936872    
+DOB_WKTuesday                                 -5.660e-03  9.219e-03  -0.614 0.539238    
+DOB_WKWednesday                               -6.709e-03  9.251e-03  -0.725 0.468273    
+BFACILFreestanding Birth Center               -1.308e+00  2.436e-01  -5.369 7.92e-08 ***
+BFACILHome (intended)                          2.450e+00  2.429e-01  10.087  < 2e-16 ***
+BFACILHome (not intended)                      4.333e+01  2.521e-01 171.883  < 2e-16 ***
+BFACILHome (unknown if intended)               2.616e+01  2.539e-01 103.046  < 2e-16 ***
+BFACILHospital                                -2.636e+00  2.411e-01 -10.933  < 2e-16 ***
+BFACILOther                                    2.643e+01  2.572e-01 102.786  < 2e-16 ***
+BFACILUnknown                                  2.529e+01  4.081e-01  61.976  < 2e-16 ***
+LD_CHORU                                       7.988e+00  1.350e-01  59.166  < 2e-16 ***
+LD_CHORY                                      -2.461e-02  2.134e-02  -1.153 0.248784    
+LD_ANESU                                              NA         NA      NA       NA    
+LD_ANESY                                      -4.231e-02  9.060e-03  -4.671 3.00e-06 ***
+NO_LBRDLV                                      2.767e-01  1.075e-02  25.754  < 2e-16 ***
+ME_PRESCephalic                               -1.293e-01  1.401e-02  -9.229  < 2e-16 ***
+ME_PRESOther                                   8.400e-02  2.659e-02   3.159 0.001586 ** 
+ME_PRESUnknown or not stated                   6.923e+00  3.744e-02 184.938  < 2e-16 ***
+PAYIndian Health Service                      -1.019e-01  9.421e-02  -1.081 0.279646    
+PAYMedicaid                                    9.002e-02  2.512e-02   3.583 0.000339 ***
+PAYOther                                       3.501e-01  3.105e-02  11.276  < 2e-16 ***
+PAYOther Government (Federal - State - Local)  6.794e-02  3.932e-02   1.728 0.084034 .  
+PAYPrivate Insurance                           4.655e-02  2.506e-02   1.857 0.063296 .  
+PAYSelf-Pay                                   -2.588e-01  2.814e-02  -9.196  < 2e-16 ***
+PAYUnknown                                     3.602e+00  4.160e-02  86.574  < 2e-16 ***
+APGAR10                                        1.149e-01  2.959e-04 388.315  < 2e-16 ***
+DPLURALQuintuplet or higher                    8.755e-01  9.989e-01   0.877 0.380755    
+DPLURALSingle                                  9.916e-02  3.533e-01   0.281 0.778941    
+DPLURALTriplet                                 7.022e-01  3.632e-01   1.934 0.053169 .  
+DPLURALTwin                                    4.645e-01  3.535e-01   1.314 0.188801    
+DBWT                                           2.714e-04  4.375e-06  62.029  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 5.202 on 3956076 degrees of freedom
+Multiple R-squared:  0.1954,	Adjusted R-squared:  0.1954 
+F-statistic: 2.745e+04 on 35 and 3956076 DF,  p-value: < 2.2e-16
+

@@ -1,0 +1,66 @@
+
+Call:
+lm(formula = APGAR5 ~ ., data = x)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-75.173  -0.292  -0.031   0.135  89.956 
+
+Coefficients: (6 not defined because of singularities)
+                                                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                   -3.755e-03  4.290e-01  -0.009  0.99302    
+DOB_YY                                                NA         NA      NA       NA    
+DOB_MM                                         3.471e-03  7.661e-04   4.530 5.89e-06 ***
+DOB_TT_MM                                      5.059e-05  1.503e-04   0.337  0.73636    
+DOB_WKMonday                                  -4.589e-03  9.418e-03  -0.487  0.62609    
+DOB_WKSaturday                                 8.333e-03  1.022e-02   0.815  0.41502    
+DOB_WKSunday                                   4.729e-03  1.070e-02   0.442  0.65855    
+DOB_WKThursday                                 1.608e-03  9.245e-03   0.174  0.86194    
+DOB_WKTuesday                                 -4.269e-03  9.210e-03  -0.464  0.64300    
+DOB_WKWednesday                               -5.327e-03  9.242e-03  -0.576  0.56438    
+BFACILFreestanding Birth Center               -1.288e+00  2.434e-01  -5.292 1.21e-07 ***
+BFACILHome (intended)                          2.414e+00  2.426e-01   9.949  < 2e-16 ***
+BFACILHome (not intended)                      4.323e+01  2.519e-01 171.646  < 2e-16 ***
+BFACILHome (unknown if intended)               2.607e+01  2.536e-01 102.762  < 2e-16 ***
+BFACILHospital                                -2.645e+00  2.409e-01 -10.979  < 2e-16 ***
+BFACILOther                                    2.628e+01  2.569e-01 102.281  < 2e-16 ***
+BFACILUnknown                                  2.495e+01  4.077e-01  61.194  < 2e-16 ***
+PWgt_R                                         5.598e-04  2.289e-05  24.455  < 2e-16 ***
+DWgt_R                                         1.797e-03  2.719e-05  66.103  < 2e-16 ***
+WTGAIN                                        -3.038e-03  1.617e-04 -18.787  < 2e-16 ***
+LD_INDLU                                       7.790e+00  1.405e-01  55.460  < 2e-16 ***
+LD_INDLY                                      -6.257e-02  6.438e-03  -9.720  < 2e-16 ***
+LD_AUGMU                                              NA         NA      NA       NA    
+LD_AUGMY                                      -3.037e-02  6.747e-03  -4.501 6.78e-06 ***
+LD_STERU                                              NA         NA      NA       NA    
+LD_STERY                                       3.123e-01  1.809e-02  17.261  < 2e-16 ***
+LD_ANTBU                                              NA         NA      NA       NA    
+LD_ANTBY                                      -1.420e-02  6.382e-03  -2.226  0.02602 *  
+LD_CHORU                                              NA         NA      NA       NA    
+LD_CHORY                                       3.222e-03  2.149e-02   0.150  0.88082    
+LD_ANESU                                              NA         NA      NA       NA    
+LD_ANESY                                      -4.350e-02  9.207e-03  -4.725 2.30e-06 ***
+NO_LBRDLV                                      2.449e-01  1.177e-02  20.815  < 2e-16 ***
+ME_PRESCephalic                               -8.957e-02  1.410e-02  -6.354 2.10e-10 ***
+ME_PRESOther                                   1.052e-01  2.660e-02   3.953 7.72e-05 ***
+ME_PRESUnknown or not stated                   6.844e+00  3.744e-02 182.801  < 2e-16 ***
+PAYIndian Health Service                      -1.418e-01  9.413e-02  -1.506  0.13204    
+PAYMedicaid                                    6.608e-02  2.510e-02   2.633  0.00847 ** 
+PAYOther                                       3.248e-01  3.103e-02  10.468  < 2e-16 ***
+PAYOther Government (Federal - State - Local)  6.074e-02  3.929e-02   1.546  0.12211    
+PAYPrivate Insurance                           3.625e-02  2.504e-02   1.447  0.14776    
+PAYSelf-Pay                                   -2.631e-01  2.812e-02  -9.357  < 2e-16 ***
+PAYUnknown                                     3.395e+00  4.163e-02  81.535  < 2e-16 ***
+APGAR10                                        1.157e-01  2.959e-04 391.018  < 2e-16 ***
+DPLURALQuintuplet or higher                    9.846e-01  9.979e-01   0.987  0.32383    
+DPLURALSingle                                  2.740e-01  3.530e-01   0.776  0.43750    
+DPLURALTriplet                                 7.296e-01  3.628e-01   2.011  0.04433 *  
+DPLURALTwin                                    5.793e-01  3.531e-01   1.640  0.10092    
+DBWT                                           2.687e-04  4.525e-06  59.371  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 5.197 on 3956069 degrees of freedom
+Multiple R-squared:  0.197,	Adjusted R-squared:  0.197 
+F-statistic: 2.31e+04 on 42 and 3956069 DF,  p-value: < 2.2e-16
+

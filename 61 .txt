@@ -1,0 +1,39 @@
+
+Call:
+lm(formula = APGAR5 ~ ., data = x)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-18.390  -0.417  -0.225  -0.086  89.644 
+
+Coefficients: (1 not defined because of singularities)
+                                                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                   -2.491e+00  3.869e-01  -6.438 1.21e-10 ***
+DOB_YY                                                NA         NA      NA       NA    
+DOB_MM                                        -2.383e-04  8.355e-04  -0.285  0.77547    
+DOB_WKMonday                                   1.242e-03  1.027e-02   0.121  0.90376    
+DOB_WKSaturday                                 5.386e-02  1.115e-02   4.832 1.35e-06 ***
+DOB_WKSunday                                   7.314e-02  1.165e-02   6.279 3.41e-10 ***
+DOB_WKThursday                                -1.018e-02  1.009e-02  -1.009  0.31301    
+DOB_WKTuesday                                 -1.792e-02  1.005e-02  -1.783  0.07452 .  
+DOB_WKWednesday                               -1.556e-02  1.008e-02  -1.543  0.12283    
+PAYIndian Health Service                       5.773e-03  1.027e-01   0.056  0.95517    
+PAYMedicaid                                    1.395e-01  2.738e-02   5.094 3.51e-07 ***
+PAYOther                                       5.643e-01  3.384e-02  16.676  < 2e-16 ***
+PAYOther Government (Federal - State - Local)  1.159e-01  4.286e-02   2.704  0.00685 ** 
+PAYPrivate Insurance                           3.351e-02  2.732e-02   1.226  0.22006    
+PAYSelf-Pay                                    1.167e+00  3.034e-02  38.473  < 2e-16 ***
+PAYUnknown                                     5.608e+00  4.512e-02 124.308  < 2e-16 ***
+APGAR10                                        1.194e-01  3.220e-04 370.720  < 2e-16 ***
+DPLURALQuintuplet or higher                    8.341e-01  1.089e+00   0.766  0.44372    
+DPLURALSingle                                 -7.036e-02  3.851e-01  -0.183  0.85504    
+DPLURALTriplet                                 5.958e-01  3.959e-01   1.505  0.13236    
+DPLURALTwin                                    3.255e-01  3.853e-01   0.845  0.39831    
+DBWT                                           3.453e-04  4.739e-06  72.856  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 5.671 on 3956091 degrees of freedom
+Multiple R-squared:  0.04376,	Adjusted R-squared:  0.04376 
+F-statistic:  9053 on 20 and 3956091 DF,  p-value: < 2.2e-16
+

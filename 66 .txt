@@ -1,0 +1,23 @@
+
+Call:
+lm(formula = APGAR5 ~ ., data = x)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-13.366  -0.467  -0.216  -0.007  91.585 
+
+Coefficients:
+                              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                  7.410e+00  3.930e-01  18.855  < 2e-16 ***
+DPLURALQuintuplet or higher -4.306e+00  1.112e+00  -3.874 0.000107 ***
+DPLURALSingle               -1.245e-01  3.931e-01  -0.317 0.751379    
+DPLURALTriplet               2.836e-01  4.041e-01   0.702 0.482910    
+DPLURALTwin                  2.244e-01  3.933e-01   0.570 0.568351    
+DBWT                         5.672e-04  4.776e-06 118.770  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 5.789 on 3956106 degrees of freedom
+Multiple R-squared:  0.003599,	Adjusted R-squared:  0.003597 
+F-statistic:  2858 on 5 and 3956106 DF,  p-value: < 2.2e-16
+

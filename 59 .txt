@@ -1,0 +1,47 @@
+
+Call:
+lm(formula = APGAR5 ~ ., data = x)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-63.250  -0.251  -0.102   0.017  89.864 
+
+Coefficients: (1 not defined because of singularities)
+                                                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                    9.161e-01  4.323e-01   2.119   0.0341 *  
+DOB_YY                                                NA         NA      NA       NA    
+DOB_MM                                         1.286e-03  7.722e-04   1.665   0.0960 .  
+DOB_TT_MM                                      7.794e-05  1.515e-04   0.514   0.6070    
+DOB_WKMonday                                  -1.067e-02  9.495e-03  -1.124   0.2612    
+DOB_WKSaturday                                 1.488e-03  1.030e-02   0.144   0.8852    
+DOB_WKSunday                                   7.585e-04  1.077e-02   0.070   0.9438    
+DOB_WKThursday                                -8.321e-03  9.323e-03  -0.892   0.3721    
+DOB_WKTuesday                                 -1.144e-02  9.288e-03  -1.232   0.2181    
+DOB_WKWednesday                               -1.451e-02  9.320e-03  -1.557   0.1195    
+BFACILFreestanding Birth Center               -1.312e+00  2.455e-01  -5.346 8.98e-08 ***
+BFACILHome (intended)                          2.571e+00  2.447e-01  10.508  < 2e-16 ***
+BFACILHome (not intended)                      4.381e+01  2.540e-01 172.506  < 2e-16 ***
+BFACILHome (unknown if intended)               2.768e+01  2.557e-01 108.251  < 2e-16 ***
+BFACILHospital                                -2.897e+00  2.429e-01 -11.924  < 2e-16 ***
+BFACILOther                                    2.701e+01  2.591e-01 104.235  < 2e-16 ***
+BFACILUnknown                                  2.730e+01  4.110e-01  66.414  < 2e-16 ***
+PAYIndian Health Service                      -5.430e-02  9.491e-02  -0.572   0.5673    
+PAYMedicaid                                    1.263e-01  2.530e-02   4.992 5.99e-07 ***
+PAYOther                                       3.878e-01  3.128e-02  12.398  < 2e-16 ***
+PAYOther Government (Federal - State - Local)  8.935e-02  3.961e-02   2.256   0.0241 *  
+PAYPrivate Insurance                           5.956e-02  2.525e-02   2.358   0.0184 *  
+PAYSelf-Pay                                   -2.075e-01  2.833e-02  -7.322 2.44e-13 ***
+PAYUnknown                                     4.322e+00  4.176e-02 103.502  < 2e-16 ***
+APGAR10                                        1.147e-01  2.977e-04 385.459  < 2e-16 ***
+DPLURALQuintuplet or higher                    6.324e-01  1.006e+00   0.628   0.5297    
+DPLURALSingle                                 -1.143e-01  3.559e-01  -0.321   0.7481    
+DPLURALTriplet                                 5.964e-01  3.659e-01   1.630   0.1031    
+DPLURALTwin                                    3.110e-01  3.561e-01   0.873   0.3824    
+DBWT                                           2.939e-04  4.389e-06  66.953  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 5.241 on 3956083 degrees of freedom
+Multiple R-squared:  0.1832,	Adjusted R-squared:  0.1832 
+F-statistic: 3.17e+04 on 28 and 3956083 DF,  p-value: < 2.2e-16
+

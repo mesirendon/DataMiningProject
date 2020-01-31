@@ -1,0 +1,183 @@
+
+Call:
+lm(formula = APGAR5 ~ ., data = x)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-102.574   -0.330   -0.020    0.175   91.431 
+
+Coefficients: (22 not defined because of singularities)
+                                                                                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                                                   -2.741e+00  4.398e-01  -6.234 4.55e-10 ***
+DOB_YY                                                                                NA         NA      NA       NA    
+DOB_MM                                                                         2.100e-03  7.551e-04   2.781 0.005412 ** 
+DOB_TT_HH                                                                      1.995e-03  4.057e-04   4.916 8.81e-07 ***
+DOB_TT_MM                                                                     -7.865e-05  1.480e-04  -0.531 0.595177    
+DOB_WKMonday                                                                  -4.308e-03  9.283e-03  -0.464 0.642570    
+DOB_WKSaturday                                                                -8.316e-03  1.009e-02  -0.824 0.410068    
+DOB_WKSunday                                                                  -1.808e-02  1.057e-02  -1.711 0.087075 .  
+DOB_WKThursday                                                                 6.875e-04  9.109e-03   0.075 0.939839    
+DOB_WKTuesday                                                                 -1.143e-03  9.075e-03  -0.126 0.899767    
+DOB_WKWednesday                                                               -5.913e-03  9.106e-03  -0.649 0.516100    
+BFACILFreestanding Birth Center                                               -1.700e-01  2.401e-01  -0.708 0.478828    
+BFACILHome (intended)                                                          2.782e+00  2.396e-01  11.611  < 2e-16 ***
+BFACILHome (not intended)                                                      3.951e+01  2.489e-01 158.737  < 2e-16 ***
+BFACILHome (unknown if intended)                                               2.554e+01  2.507e-01 101.866  < 2e-16 ***
+BFACILHospital                                                                -2.643e+00  2.375e-01 -11.129  < 2e-16 ***
+BFACILOther                                                                    2.241e+01  2.537e-01  88.358  < 2e-16 ***
+BFACILUnknown                                                                  1.866e+01  4.033e-01  46.265  < 2e-16 ***
+RESTATUS                                                                       2.283e-02  5.042e-03   4.527 5.98e-06 ***
+MRACE6Asian (only)                                                             4.667e-02  3.411e-02   1.368 0.171199    
+MRACE6Black (only)                                                             4.741e-02  3.116e-02   1.521 0.128209    
+MRACE6More than one race                                                       9.865e-03  3.396e-02   0.290 0.771470    
+MRACE6NHOPI (only)                                                             4.506e-02  6.412e-02   0.703 0.482228    
+MRACE6White (only)                                                            -1.109e-02  3.012e-02  -0.368 0.712738    
+MHISP_RAsian (only)                                                           -3.040e-02  4.271e-02  -0.712 0.476530    
+MHISP_RBlack (only)                                                           -5.434e-02  4.475e-02  -1.214 0.224579    
+MHISP_RMore than one race                                                     -4.400e-02  4.040e-02  -1.089 0.276057    
+MHISP_RNHOPI (only)                                                           -2.326e-03  4.286e-02  -0.054 0.956731    
+MHISP_RWhite (only)                                                           -2.823e-02  4.126e-02  -0.684 0.493825    
+MAR_PU                                                                        -6.952e-02  7.130e-02  -0.975 0.329539    
+MAR_PX                                                                        -5.151e-02  2.203e-02  -2.338 0.019387 *  
+MAR_PY                                                                        -1.775e-02  2.217e-02  -0.800 0.423520    
+DMARUnmarried                                                                         NA         NA      NA       NA    
+MEDUC9th through 12th grade with no diploma                                    7.111e-03  1.804e-02   0.394 0.693514    
+MEDUCAssociate degree (AA - AS)                                                2.616e-02  1.957e-02   1.337 0.181226    
+MEDUCBachelor’s degree (BA - AB - BS)                                          1.953e-02  1.896e-02   1.030 0.303004    
+MEDUCDoctorate (PhD - EdD) or Professional Degree (MD - DDS - DVM - LLB - JD)  8.064e-03  2.514e-02   0.321 0.748387    
+MEDUCHigh school graduate or GED completed                                     2.949e-02  1.747e-02   1.688 0.091386 .  
+MEDUCMaster’s degree (MA - MS - MEng - MEd - MSW - MBA)                        2.651e-02  2.043e-02   1.297 0.194475    
+MEDUCSome college credit but not a degree.                                     2.160e-02  1.800e-02   1.200 0.230219    
+MEDUCUnknown                                                                   3.526e-01  3.072e-02  11.477  < 2e-16 ***
+FAGEREC1120-24 years                                                          -5.927e-02  2.092e-02  -2.834 0.004603 ** 
+FAGEREC1125-29 years                                                          -1.010e-01  2.065e-02  -4.890 1.01e-06 ***
+FAGEREC1130-34 years                                                          -1.002e-01  2.090e-02  -4.794 1.64e-06 ***
+FAGEREC1135-39 years                                                          -8.885e-02  2.141e-02  -4.150 3.33e-05 ***
+FAGEREC1140-44 years                                                          -7.505e-02  2.279e-02  -3.293 0.000993 ***
+FAGEREC1145-49 years                                                          -1.097e-01  2.648e-02  -4.144 3.42e-05 ***
+FAGEREC1150-54 years                                                          -3.603e-02  3.602e-02  -1.000 0.317276    
+FAGEREC1155-98 years                                                          -7.858e-02  4.817e-02  -1.631 0.102800    
+FAGEREC11Not stated                                                            2.241e-02  3.259e-02   0.687 0.491806    
+FAGEREC11Under 15 years                                                        7.642e-01  3.245e-01   2.355 0.018500 *  
+FRACE6Asian (only)                                                             6.281e-02  3.996e-02   1.572 0.116020    
+FRACE6Black (only)                                                             6.600e-02  3.707e-02   1.780 0.075036 .  
+FRACE6More than one race                                                       3.032e-02  3.695e-02   0.821 0.411905    
+FRACE6NHOPI (only)                                                            -1.866e-01  7.109e-02  -2.625 0.008661 ** 
+FRACE6White (only)                                                             1.570e-02  3.589e-02   0.437 0.661755    
+FHISP_RAsian (only)                                                            8.610e-02  4.447e-02   1.936 0.052845 .  
+FHISP_RBlack (only)                                                            5.245e-02  4.653e-02   1.127 0.259615    
+FHISP_RMore than one race                                                      3.860e-02  4.160e-02   0.928 0.353431    
+FHISP_RNHOPI (only)                                                            9.908e-02  4.424e-02   2.240 0.025114 *  
+FHISP_RWhite (only)                                                            8.444e-02  4.250e-02   1.987 0.046956 *  
+FEDUC9th through 12th grade with no diploma                                   -2.610e-02  1.821e-02  -1.433 0.151787    
+FEDUCAssociate degree (AA - AS)                                               -1.807e-02  2.016e-02  -0.896 0.370014    
+FEDUCBachelor’s degree (BA - AB - BS)                                         -1.331e-02  1.899e-02  -0.701 0.483360    
+FEDUCDoctorate (PhD - EdD) or Professional Degree (MD - DDS - DVM - LLB - JD)  1.288e-03  2.429e-02   0.053 0.957693    
+FEDUCHigh school graduate or GED completed                                    -7.832e-03  1.740e-02  -0.450 0.652551    
+FEDUCMaster’s degree (MA - MS - MEng - MEd - MSW - MBA)                        1.527e-03  2.091e-02   0.073 0.941770    
+FEDUCSome college credit but not a degree.                                    -1.700e-02  1.821e-02  -0.933 0.350627    
+FEDUCUnknown                                                                  -6.976e-02  2.546e-02  -2.739 0.006155 ** 
+TBO_REC                                                                        2.450e-02  1.745e-03  14.040  < 2e-16 ***
+PRECARE54th to 6th month                                                      -1.725e-02  7.293e-03  -2.365 0.018027 *  
+PRECARE57th to final month                                                     4.213e-02  1.287e-02   3.275 0.001058 ** 
+PRECARE5No prenatal care                                                       1.281e+00  2.156e-02  59.409  < 2e-16 ***
+PRECARE5Unknown or not stated                                                  3.805e-01  2.216e-02  17.170  < 2e-16 ***
+PREVIS                                                                         4.662e-03  2.463e-04  18.926  < 2e-16 ***
+WICU                                                                           1.030e-01  2.373e-02   4.341 1.42e-05 ***
+WICY                                                                          -2.366e-02  6.790e-03  -3.484 0.000493 ***
+CIG_0                                                                          3.142e-02  3.395e-03   9.254  < 2e-16 ***
+CIG_1                                                                          4.296e-04  3.451e-04   1.245 0.213194    
+CIG_2                                                                         -3.125e-04  4.626e-04  -0.676 0.499257    
+CIG_3                                                                         -2.757e-04  4.421e-04  -0.624 0.532793    
+M_Ht_In                                                                       -8.547e-03  7.482e-04 -11.424  < 2e-16 ***
+BMI_RNormal 18.5-24.9                                                          3.035e-01  1.558e-02  19.480  < 2e-16 ***
+BMI_RObesity I 35.0-34.9                                                       1.746e-01  1.461e-02  11.953  < 2e-16 ***
+BMI_RObesity II 35.0-39.9                                                      9.116e-02  1.570e-02   5.806 6.39e-09 ***
+BMI_ROverweight 25.0-29.9                                                      2.347e-01  1.477e-02  15.888  < 2e-16 ***
+BMI_RUnderweight <18.5                                                         4.171e-01  2.130e-02  19.584  < 2e-16 ***
+BMI_RUnknown or not stated                                                     5.923e-01  4.139e-02  14.311  < 2e-16 ***
+PWgt_R                                                                         1.729e-04  5.444e-05   3.175 0.001499 ** 
+DWgt_R                                                                         1.849e-03  2.956e-05  62.541  < 2e-16 ***
+WTGAIN                                                                        -5.867e-03  1.825e-04 -32.145  < 2e-16 ***
+RF_PDIABU                                                                     -9.577e-01  2.146e-01  -4.462 8.12e-06 ***
+RF_PDIABY                                                                      2.235e-02  2.858e-02   0.782 0.434171    
+RF_GDIABU                                                                             NA         NA      NA       NA    
+RF_GDIABY                                                                     -9.780e-03  1.247e-02  -0.784 0.432844    
+RF_PHYPEU                                                                             NA         NA      NA       NA    
+RF_PHYPEY                                                                      7.766e-02  2.084e-02   3.727 0.000194 ***
+RF_GHYPEU                                                                             NA         NA      NA       NA    
+RF_GHYPEY                                                                      8.412e-02  1.279e-02   6.577 4.82e-11 ***
+RF_EHYPEU                                                                             NA         NA      NA       NA    
+RF_EHYPEY                                                                      4.976e-02  5.070e-02   0.982 0.326325    
+RF_PPTERMU                                                                            NA         NA      NA       NA    
+RF_PPTERMY                                                                     6.232e-02  1.612e-02   3.866 0.000111 ***
+RF_INFTRU                                                                             NA         NA      NA       NA    
+RF_INFTRY                                                                      6.795e-02  8.204e-02   0.828 0.407501    
+RF_FEDRGU                                                                      2.696e-01  1.085e-01   2.486 0.012929 *  
+RF_FEDRGX                                                                             NA         NA      NA       NA    
+RF_FEDRGY                                                                     -7.944e-02  7.476e-02  -1.063 0.287998    
+RF_ARTECU                                                                             NA         NA      NA       NA    
+RF_ARTECX                                                                             NA         NA      NA       NA    
+RF_ARTECY                                                                     -1.142e-01  7.685e-02  -1.486 0.137301    
+RF_CESARN                                                                      1.256e-02  1.292e-03   9.725  < 2e-16 ***
+NO_RISKS                                                                       4.694e-02  8.953e-03   5.243 1.58e-07 ***
+IP_GONU                                                                        1.123e+00  6.188e-01   1.816 0.069419 .  
+IP_GONY                                                                        5.127e-02  6.217e-02   0.825 0.409524    
+IP_SYPHU                                                                              NA         NA      NA       NA    
+IP_SYPHY                                                                       3.958e-02  1.049e-01   0.377 0.705961    
+IP_CHLAMU                                                                             NA         NA      NA       NA    
+IP_CHLAMY                                                                      5.131e-02  7.540e-02   0.680 0.496233    
+IP_HEPBU                                                                              NA         NA      NA       NA    
+IP_HEPBY                                                                       5.360e-02  9.031e-02   0.594 0.552846    
+IP_HEPCU                                                                              NA         NA      NA       NA    
+IP_HEPCY                                                                       1.330e-01  8.225e-02   1.617 0.105789    
+NO_INFEC                                                                       4.361e-02  7.699e-02   0.566 0.571117    
+LD_INDLU                                                                       5.603e-01  1.477e-01   3.793 0.000149 ***
+LD_INDLY                                                                      -8.034e-02  6.629e-03 -12.119  < 2e-16 ***
+LD_AUGMU                                                                              NA         NA      NA       NA    
+LD_AUGMY                                                                      -5.610e-02  6.817e-03  -8.230  < 2e-16 ***
+LD_STERU                                                                              NA         NA      NA       NA    
+LD_STERY                                                                       4.948e-01  1.809e-02  27.352  < 2e-16 ***
+LD_ANTBU                                                                              NA         NA      NA       NA    
+LD_ANTBY                                                                       8.583e-03  6.364e-03   1.349 0.177421    
+LD_CHORU                                                                              NA         NA      NA       NA    
+LD_CHORY                                                                      -2.725e-03  2.124e-02  -0.128 0.897932    
+LD_ANESU                                                                              NA         NA      NA       NA    
+LD_ANESY                                                                      -1.607e-02  9.182e-03  -1.750 0.080037 .  
+NO_LBRDLV                                                                      2.265e-01  1.161e-02  19.511  < 2e-16 ***
+ME_PRESCephalic                                                               -1.774e-01  1.434e-02 -12.376  < 2e-16 ***
+ME_PRESOther                                                                   4.994e-02  2.631e-02   1.898 0.057720 .  
+ME_PRESUnknown or not stated                                                   4.725e+00  3.777e-02 125.101  < 2e-16 ***
+ME_ROUTForceps                                                                -3.985e-02  3.528e-02  -1.130 0.258674    
+ME_ROUTSpontaneous                                                             6.976e-02  7.037e-03   9.913  < 2e-16 ***
+ME_ROUTUnknown or not stated                                                   2.236e+01  1.094e-01 204.377  < 2e-16 ***
+ME_ROUTVacuum                                                                 -6.760e-02  1.724e-02  -3.921 8.82e-05 ***
+DMETH_RECUnknown                                                                      NA         NA      NA       NA    
+DMETH_RECVaginal                                                                      NA         NA      NA       NA    
+ATTENDDoctor of Medicine (MD)                                                  2.862e-01  9.585e-03  29.857  < 2e-16 ***
+ATTENDDoctor of Osteopathy (DO)                                                2.125e-01  1.318e-02  16.129  < 2e-16 ***
+ATTENDOther                                                                    4.641e+00  3.164e-02 146.682  < 2e-16 ***
+ATTENDOther Midwife                                                           -2.487e+00  3.782e-02 -65.745  < 2e-16 ***
+ATTENDUnknown or not stated                                                    1.019e+01  1.065e-01  95.687  < 2e-16 ***
+PAYIndian Health Service                                                      -8.122e-02  9.505e-02  -0.854 0.392843    
+PAYMedicaid                                                                    4.655e-02  2.523e-02   1.845 0.065053 .  
+PAYOther                                                                       2.712e-01  3.078e-02   8.811  < 2e-16 ***
+PAYOther Government (Federal - State - Local)                                 -2.851e-01  3.893e-02  -7.324 2.40e-13 ***
+PAYPrivate Insurance                                                           9.628e-02  2.483e-02   3.877 0.000106 ***
+PAYSelf-Pay                                                                   -2.743e-01  2.820e-02  -9.728  < 2e-16 ***
+PAYUnknown                                                                     2.171e+00  4.139e-02  52.460  < 2e-16 ***
+APGAR10                                                                        1.121e-01  2.941e-04 381.054  < 2e-16 ***
+DPLURALQuintuplet or higher                                                    1.017e+00  9.833e-01   1.034 0.301233    
+DPLURALSingle                                                                 -3.759e-01  3.479e-01  -1.081 0.279893    
+DPLURALTriplet                                                                 4.190e-01  3.575e-01   1.172 0.241095    
+DPLURALTwin                                                                    7.019e-02  3.480e-01   0.202 0.840148    
+SEXM                                                                           4.196e-03  5.190e-03   0.809 0.418789    
+COMBGEST                                                                       1.028e-01  9.960e-04 103.169  < 2e-16 ***
+DBWT                                                                           7.985e-05  5.014e-06  15.925  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 5.12 on 3955968 degrees of freedom
+Multiple R-squared:  0.2207,	Adjusted R-squared:  0.2206 
+F-statistic:  7834 on 143 and 3955968 DF,  p-value: < 2.2e-16
+
