@@ -18,6 +18,7 @@ births <- read.table("births.csv", header = TRUE, sep = ",")
 ###################################################################################################
 
 str(births)
+summary(births)
 
 ###################################################################################################
 ### Frequency
@@ -131,3 +132,46 @@ barchart(births.cig2, horizontal = FALSE)
 
 births.cig3 <- table(births$CIG_3)
 barchart(births.cig3, horizontal = FALSE)
+
+backwardElimination <- function(x, sl) {
+  numVars = length(x)
+  for (i in c(1:numVars)){
+    regressor = lm(formula = APGAR5 ~ ., data = x)
+    maxVar = max(coef(summary(regressor))[c(2:numVars), "Pr(>|t|)"])
+    if (maxVar > sl){
+      j = which(coef(summary(regressor))[c(2:numVars), "Pr(>|t|)"] == maxVar)
+      x = x[, -j]
+    }
+    print(numVars)
+    numVars = numVars - 1
+    file <- paste(i, ".txt")
+    sink(file = file)
+    print(summary(regressor))
+    sink()
+  }
+  return(summary(regressor))
+}
+
+SL = 0.05
+backwardElimination(births, SL)
+
+library(caTools)
+set.seed(123)
+split = sample.split(births$APGAR5, SplitRatio = 0.8)
+training_set = subset(births, split == TRUE)
+test_set = subset(births, split == FALSE)
+
+regressor <- lm(
+  formula = APGAR5 ~ DBWT,
+  data = training_set
+)
+
+library(ggplot2)
+ggplot() +
+  geom_point(aes(x = training_set$DBWT, y = training_set$APGAR5),
+             colour = 'red') +
+  geom_line(aes(x = training_set$DBWT, y = predict(regressor, newdata = training_set)),
+            colour = 'blue') +
+  ggtitle('APGAR5 vs DBWT (Training set)') +
+  xlab('Weight') +
+  ylab('APGAR Score')
